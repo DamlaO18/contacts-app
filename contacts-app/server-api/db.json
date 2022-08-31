@@ -1,0 +1,14 @@
+{
+  "contacts": [
+    {
+      "id": "3f67d80d-41ae-41a0-a729-4c76d424b61d",
+      "name": "nails",
+      "email": "nails@gmail.com"
+    },
+    {
+      "id": "c6f9c00a-2871-4105-bda7-9405ddf9927c",
+      "name": "hair",
+      "email": "hair@gmail.com"
+    }
+  ]
+}
