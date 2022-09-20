@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useContactsCrud } from '../context/ContactsCrudContext';
 
 const EditContact = () => {
@@ -9,6 +9,22 @@ const EditContact = () => {
     const [newName, setNewName] = useState(name);
     const [newEmail, setNewEmail] = useState(email);
     const {updateContactHandler} = useContactsCrud();
+
+    const params = useParams()
+    
+    function getDetails() {
+        fetch("http://localhost:3006/contacts/" + params.id)
+        .then(response => response.json())
+        .then(response => 
+            {
+                setNewName(response.name)
+                setNewEmail(response.email)
+            })
+    }
+
+    useEffect(() => {
+        getDetails()
+    }, [])    
 
     const update = (e) => {
         e.preventDefault();

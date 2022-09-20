@@ -22,7 +22,7 @@ const ContactCard = (props) => {
         <i 
         className='trash alternate outline icon' 
         style={{color:"red", marginTop: "7px", marginLeft: "10px"}}
-        onClick={() => deleteContact(id)}></i>
+        onClick={(e) => window.confirm('Are you sure?') ? deleteContact(id) : e.preventDefault}></i>
         <Link 
         to={`/contacts/${id}`} 
         state= { {contact: props.contacts} }>
