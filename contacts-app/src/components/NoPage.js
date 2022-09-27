@@ -2,7 +2,7 @@ import React from 'react';
 
 const NoPage = () => {
     return (
-        <h1>No Page Found</h1>
+        <h1>Whoops! No page found.</h1>
     );
 };
 

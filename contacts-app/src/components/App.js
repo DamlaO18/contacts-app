@@ -12,9 +12,9 @@ import { ContactsCrudContextProvider } from '../context/ContactsCrudContext';
 function App() {
   return (
     <div className='ui container'>
-
-      <Router>
       <Header />
+      
+      <Router>
       <ContactsCrudContextProvider>
         <Routes>
           <Route index element={<ContactList />} />

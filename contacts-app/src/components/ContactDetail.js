@@ -17,8 +17,6 @@ const ContactDetail = () => {
         getDetails();
     },[])
 
-
-    // const { name, email } = props.contacts || {};
     return (
         <div className="main">
             

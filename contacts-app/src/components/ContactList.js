@@ -1,9 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useContactsCrud } from '../context/ContactsCrudContext';
 import ContactCard from './ContactCard';
 
-const ContactList = (props) => {
+const ContactList = () => {
     const {contacts, retrieveContacts, searchTerm, searchResults, searchHandler} = useContactsCrud();
 
 
